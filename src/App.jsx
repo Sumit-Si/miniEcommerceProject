@@ -9,17 +9,20 @@ const App = () => {
   console.log(pathname, category_name);
 
   return (
-    <div className="h-screen w-full flex relative">
-      {(category_name != undefined) && (
-        <Link
-          to="/"
-          className="absolute left-1/4 my-2 rounded shadow-sm font-semibold bg-orange-100 px-3 py-1"
-        >
-          Home
-        </Link>
+    <div className="w-full relative">
+      {category_name != undefined && (
+        <div className="absolute py-2 flex justify-center z-10 w-full bg-slate-100">
+          <Link
+            to="/"
+            className="rounded shadow-sm text-sm font-semibold bg-orange-100 px-3 py-1"
+          >
+            Home
+          </Link>
+        </div>
       )}
-
-      <RoutesContainer />
+      <div className={`${category_name != undefined && "pt-10"} flex h-screen overflow-hidden`}>
+        <RoutesContainer />
+      </div>
     </div>
   );
 };

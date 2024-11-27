@@ -32,7 +32,7 @@ const Home = () => {
     <>
       <Navbar />
       <div
-        className="h-screen overflow-y-scroll mt-10"
+        className="h-screen overflow-y-scroll"
         style={{ width: "calc(100% - 18%)" }}
       >
         <div className="flex p-5 gap-6 flex-wrap justify-center items-start">
